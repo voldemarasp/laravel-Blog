@@ -1,5 +1,5 @@
 <?php
-
+// Auth::user()->'role'=='admin';
 namespace App;
 
 use Illuminate\Notifications\Notifiable;
