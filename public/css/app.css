@@ -1,0 +1,26 @@
+li {
+	float:left;
+	list-style-type: none;
+	padding-left:20px;
+}
+
+.form-control {
+	margin-top: 30px;
+}
+
+.main-title {
+	text-align: center;
+}
+
+.black a {
+	color:black;
+}
+
+.red a {
+	color:red;
+}
+
+.comment {
+	padding: 50px;
+	border:1px solid #efefef;
+}
