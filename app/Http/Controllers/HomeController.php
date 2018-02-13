@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Comments;
 use App\Post;
 
 class HomeController extends Controller
@@ -15,22 +16,11 @@ class HomeController extends Controller
      */
     public function index()
     {
-    	//Istraukti
-    	$posts = Post::all();
-    	// $post = Post::where('id', 110)->get();
-    	// $somePosts = Post::where('id', '>', 100)->get();
-    	// $posties = Post::where('id', '>', 100)->where('id', '<', 105)->get();
 
-    	//ikelti
-    	// $post = new Post();
-    	// $post->title = 'my blog title';
-    	// $post->content = 'Yayayayya';
-    	// $post->date = '2017-01-10';
-    	// $post->save();
+    	$posts = Post::limit(10)->get();
+    	$comments = Comments::orderBy('date', 'asc')->get();
 
-    	// $posts = [$post1, $post2, $post3];
-
-        return view('welcome', [ 'posts' => $posts ]);
+        return view('welcome', [ 'posts' => $posts, 'comments' => $comments ]);
     }
     public function admin()
     {

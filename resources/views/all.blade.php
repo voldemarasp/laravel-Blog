@@ -17,4 +17,5 @@
 <a href="/edit?post_id={{ $post->id }}">Edit</a>
 </div>
 @endforeach
+{{$posts->links()}}
 </div>
